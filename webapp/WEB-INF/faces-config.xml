@@ -14,5 +14,9 @@
         </navigation-case>
 
     </navigation-rule>
+    <validator>
+        <validator-id>yValidator</validator-id>
+        <validator-class>ru.javastudy.beans.Validators.YValidator</validator-class>
+    </validator>
   
 </faces-config>

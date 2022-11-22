@@ -1,5 +1,6 @@
 package ru.javastudy.beans;
 
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import java.util.ArrayList;
@@ -7,7 +8,7 @@ import java.util.Arrays;
 
 @ManagedBean
 @SessionScoped
-public class XBean {
+public class XBean  {
 
     private double value1;
     private String Z;
@@ -47,8 +48,7 @@ public class XBean {
                 (y + value1 <= r && value1 >= 0 && y <= 0) ||
                 (y / 2 >= (value1 - r / 2) && value1 >= 0 && y >= 0)) {
             hit = true;
-        }
-        else{
+        } else {
             hit = false;
         }
     }
@@ -60,4 +60,6 @@ public class XBean {
     public ArrayList<ResultTable> getEmployees() {
         return Result;
     }
+
+
 }

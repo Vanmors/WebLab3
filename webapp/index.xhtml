@@ -32,11 +32,15 @@
 
                 <p:spinner value="#{xBean.value1}" min="-5" max="5" stepFactor="0.1"/>
                 <p/>
-                <p:inputText id="inputTextId" title="Binding with ManagedBean" value="#{xBean.inputText}"/>
+                <p:inputText id="inputTextId" title="Binding with ManagedBean" value="#{xBean.inputText}">
+                    <f:validateDoubleRange minimum="-3" maximum="5"/>
+                </p:inputText>
                 <p/>
                 <br/>
                 <p/>
-                <p:inputText value="#{xBean.z}"/>
+                <p:inputText value="#{xBean.z}">
+                    <f:validateDoubleRange minimum="1" maximum="4"/>
+                </p:inputText>
                 <p/>
                 <p:commandButton value="GO to next page" action="nextPage"/>
 
