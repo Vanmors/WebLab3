@@ -84,20 +84,20 @@
 
 
         <h:form>
-            <h:dataTable id="result-Table" class = "table" value="#{xBean.employees}" border="2">
+            <h:dataTable id="result-Table" class = "table" value="#{xBean.employees}" border="2" var="resultTable">
                 <h:column>
                     <f:facet name="header">X</f:facet>
-                    #{xBean.value1}
+                    #{resultTable.x}
                 </h:column>
 
                 <h:column>
                     <f:facet name="header">Y</f:facet>
-                    #{xBean.inputText}
+                    #{resultTable.y}
                 </h:column>
 
                 <h:column>
                     <f:facet name="header">Z</f:facet>
-                    #{xBean.z}
+                    #{resultTable.r}
                 </h:column>
 
                 <h:column>
