@@ -1,46 +1,54 @@
 package ru.javastudy.beans;
 
+import lombok.Data;
+
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 @ManagedBean
 @SessionScoped
+@Data
 public class XBean  {
 
+    @Inject
     private double value1;
     private String Z;
     private String inputText;
     private boolean hit = false;
 
+//    public String getInputText() {
+//        return inputText;
+//    }
+//
+//    public void setInputText(String inputText) {
+//        this.inputText = inputText;
+//    }
+//
+//
+//    public String getZ() {
+//        return Z;
+//    }
+//
+//    public void setZ(String Z) {
+//        this.Z = Z;
+//    }
+//
+//    public double getValue1() {
+//        return value1;
+//    }
+//
+//    public void setValue1(double value1) {
+//        this.value1 = value1;
+//    }
 
-    public String getInputText() {
-        return inputText;
+    public boolean getHit(){
+        return hit;
     }
-
-    public void setInputText(String inputText) {
-        this.inputText = inputText;
-    }
-
-    public String getZ() {
-        return Z;
-    }
-
-    public void setZ(String Z) {
-        this.Z = Z;
-    }
-
-    public double getValue1() {
-        return value1;
-    }
-
-    public void setValue1(double value1) {
-        this.value1 = value1;
-    }
-
-    public void isHit() {
+    public void setHit() {
         double y = Double.parseDouble(inputText);
         double r = Double.parseDouble(Z);
 
@@ -53,7 +61,6 @@ public class XBean  {
         }
     }
 
-    //    private static double value1;
     ArrayList<ResultTable> Result = new ArrayList<ResultTable>
             (Arrays.asList(new ResultTable(value1, inputText, Z, hit)));
 
