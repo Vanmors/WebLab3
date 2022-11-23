@@ -11,7 +11,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="JSF Hello World" target="1.5" />
+      <module name="JSF Hello World" target="6" />
     </bytecodeTargetLevel>
   </component>
 </project>

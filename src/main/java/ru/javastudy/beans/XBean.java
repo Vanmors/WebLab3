@@ -1,6 +1,7 @@
 package ru.javastudy.beans;
 
 import lombok.Data;
+import ru.javastudy.beans.DBWork.TableDAOImpl;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
@@ -71,6 +72,8 @@ public class XBean {
     public String verifyUser() {
         ResultTable res = new ResultTable(value1, inputText, Z, hit);
         Result.add(res);
+        TableDAOImpl tableDAO = new TableDAOImpl();
+        tableDAO.save(res);
         return "success";
     }
 }

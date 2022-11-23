@@ -6,7 +6,7 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:c="http://java.sun.com/jsp/jstl/core"
       xmlns:p="http://primefaces.org/ui"
-      xmlns:ace="http://www.icefaces.org/icefaces/components" >
+      xmlns:ace="http://www.icefaces.org/icefaces/components">
 
 <f:view>
     <h:head>
@@ -42,10 +42,12 @@
                     <f:validateDoubleRange minimum="1" maximum="4"/>
                 </p:inputText>
                 <p/>
-                <p:commandButton value="GO to next page" action= "#{xBean.verifyUser}"/>
+                <p:commandButton value="GO to next page" action="#{xBean.verifyUser}"/>
+
 
             </p:panel>
         </h:form>
+
         <script type="text/javascript" src="canvas.js"></script>
     </h:body>
 </f:view>
