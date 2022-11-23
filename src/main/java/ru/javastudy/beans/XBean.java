@@ -61,8 +61,7 @@ public class XBean {
 //        }
 //    }
 
-    ArrayList<ResultTable> Result = new ArrayList<ResultTable>
-            (Arrays.asList(new ResultTable(value1, inputText, Z, hit)));
+    ArrayList<ResultTable> Result = new ArrayList<ResultTable>();
 
     public ArrayList<ResultTable> getEmployees() {
         return Result;
@@ -70,6 +69,8 @@ public class XBean {
 
 
     public String verifyUser() {
+        ResultTable res = new ResultTable(value1, inputText, Z, hit);
+        Result.add(res);
         return "success";
     }
 }
