@@ -12,12 +12,12 @@ import java.util.Arrays;
 @ManagedBean
 @SessionScoped
 @Data
-public class XBean  {
+public class XBean {
 
     @Inject
     private double value1;
-    private String Z;
-    private String inputText;
+    private Double Z;
+    private Double inputText;
     private boolean hit = false;
 
 //    public String getInputText() {
@@ -45,21 +45,21 @@ public class XBean  {
 //        this.value1 = value1;
 //    }
 
-    public boolean getHit(){
-        return hit;
-    }
-    public void setHit() {
-        double y = Double.parseDouble(inputText);
-        double r = Double.parseDouble(Z);
-
-        if (((value1 * value1 + y * y) <= r * r && value1 <= 0 && y >= 0) ||
-                (y + value1 <= r && value1 >= 0 && y <= 0) ||
-                (y / 2 >= (value1 - r / 2) && value1 >= 0 && y >= 0)) {
-            hit = true;
-        } else {
-            hit = false;
-        }
-    }
+//    public boolean getHit(){
+//        return hit;
+//    }
+//    public void setHit() {
+//        double y = Double.parseDouble(inputText);
+//        double r = Double.parseDouble(Z);
+//
+//        if (((value1 * value1 + y * y) <= r * r && value1 <= 0 && y >= 0) ||
+//                (y + value1 <= r && value1 >= 0 && y <= 0) ||
+//                (y / 2 >= (value1 - r / 2) && value1 >= 0 && y >= 0)) {
+//            hit = true;
+//        } else {
+//            hit = false;
+//        }
+//    }
 
     ArrayList<ResultTable> Result = new ArrayList<ResultTable>
             (Arrays.asList(new ResultTable(value1, inputText, Z, hit)));
@@ -69,4 +69,7 @@ public class XBean  {
     }
 
 
+    public String verifyUser() {
+        return "success";
+    }
 }

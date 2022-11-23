@@ -1,17 +1,23 @@
 package ru.javastudy.beans;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.io.Serializable;
 
+@Getter
+@Setter
 public class ResultTable implements Serializable {
+    public Long id;
     private double x;
-    private String y;
-    private String z;
+    private Double y;
+    private Double r;
     private boolean hit;
 
-    public ResultTable(double x, String y, String z, boolean hit) {
+    public ResultTable(double x, Double y, Double r, boolean hit) {
         this.x = x;
         this.y = y;
-        this.z = z;
+        this.r = r;
         this.hit = hit;
     }
 
